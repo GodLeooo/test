@@ -36,6 +36,7 @@ public class NIOServer {
                     SocketChannel clientChannel = serverChannel.accept();
                     clientChannel.configureBlocking(false);
                     clientChannel.register(selector, SelectionKey.OP_READ);
+
  
                 } else if (key.isReadable()) {
  
